@@ -8,7 +8,6 @@ export default class MyTextInput extends React.Component {
     this.state = {
       keyText: "enter a key",
       valueText: "enter a value",
-      addPairAction: props.addPairAction
     };
   }
   sumbit() {
@@ -18,16 +17,16 @@ export default class MyTextInput extends React.Component {
       this.state.valueText != "" &&
       this.state.valueText !== "enter a value"
     ) {
-      const newKeyValuePair = `{Key: ${this.state.keyText} + ", value:" ${
-        this.state.valueText
-      }}`;
+
       let parsedPair;
       try {
-        parsedPair = JSON.parse(newKeyValuePair);
+        parsedPair = JSON.parse(`{"key":"${this.state.keyText}", "value":${
+          this.state.valueText
+        }}`);
       } catch (err) {
         parsedPair = { key: this.state.keyText, value: this.state.valueText };
       }
-      this.state.addPairAction(parsedPair);
+      this.props.addPairAction(parsedPair);
       this.setState({
         keyText: "enter a key",
         valueText: "enter a value"
