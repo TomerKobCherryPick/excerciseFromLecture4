@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Text, View} from 'react-native'
 import PropTypes from 'prop-types'
-import {styles} from "./Styles.js"
+import {styles} from "../Styles/Styles.js"
 
 const Row = props => (
   <View style={styles.row} >

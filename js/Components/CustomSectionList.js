@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import Row from "./Row.js";
 import Header from "./Header.js";
 import MyTextInput from "./MyTextInput.js";
-import {styles} from "./Styles.js"
+import {styles} from "../Styles/Styles.js"
 
 
 const renderItem = ({ item, index }) => <Row objectValue={item.value} />;

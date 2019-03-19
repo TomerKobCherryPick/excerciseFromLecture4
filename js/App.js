@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View } from "react-native";
-import CustomSectionList from "./CustomSectionList.js";
-import { styles } from "./Styles.js";
+import CustomSectionList from "./Components/CustomSectionList.js";
+import { styles } from "./Styles/Styles.js";
 
 const exampleDate = {
   Number: 42,
