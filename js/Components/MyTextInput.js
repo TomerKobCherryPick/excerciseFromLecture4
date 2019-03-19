@@ -14,17 +14,13 @@ export default class MyTextInput extends React.Component {
   handleChangeKey(key){
     this.setState({keyText: key},
     this.validateSubmit)
-    //this.validateSubmit()
   }
   handleChangeValue(value){
-    console.log(typeof this.validateSubmit)
     this.setState({valueText: value},
       this.validateSubmit
     )
-    //this.validateSubmit()
   }
   validateSubmit(){
-    console.log(this.state)
     if((this.state.keyText !== "") && (this.state.valueText != "")){
       this.setState({
         isSubmitable: true
